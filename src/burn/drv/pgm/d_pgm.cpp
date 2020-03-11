@@ -6345,7 +6345,6 @@ struct BurnDriver BurnDrvKovking = {
 };
 
 // FBA4DROID 三国战纪 正宗1V8 Knights of Valour - Sangoku Senki (1VS8 20170218)
-// Not working due to protection?
 static struct BurnRomInfo kov8RomDesc[] = {
 	{ "Fzzf_v8.rom",     	0x400000, 0x3e937269, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
 
@@ -6369,7 +6368,7 @@ STD_ROM_FN(kov8)
 
 struct BurnDriver BurnDrvKov8 = {
 	"kov8", "kovplus", "pgm", NULL, "2017",
-	"Knights of Valour Plus (1VS8 20170218)\0", "Not working!", "hack", "PolyGameMaster",
+	"Knights of Valour Plus (1VS8 20170218)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
 	NULL, kov8RomInfo, kov8RomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
@@ -6760,9 +6759,8 @@ struct BurnDriver BurnDrvKovplus2012dw = {
 };
 
 // FBA4DROID 三国战纪 正宗2012 噩梦版 Knights of Valour Plus (Nightmare 20180601)
-// Not working properly.
 static struct BurnRomInfo kovplus2012mRomDesc[] = {
-	{ "p2012m.119",       	0x600000, 0xaf18fd5e, 1 | BRF_PRG | BRF_ESS },
+	{ "p2012m.119",       	0x400000, 0xaf18fd5e, 1 | BRF_PRG | BRF_ESS },
 
 	{ "t0600.rom",     		0x800000, 0xea123375, 2 | BRF_GRA },
 
@@ -6799,7 +6797,7 @@ STD_ROM_FN(kovplus2012m)
 
 struct BurnDriver BurnDrvKovplus2012m = {
 	"kovplus2012m", "kovplus", "pgm", NULL, "2018",
-	"Knights of Valour Plus (Nightmare 20180601)\0", "Not Working!", "hack", "PolyGameMaster",
+	"Knights of Valour Plus (Nightmare 20180601)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
 	NULL, kovplus2012mRomInfo, kovplus2012mRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
@@ -8352,9 +8350,9 @@ struct BurnDriver BurnDrvKov2pfwly = {
 
 // FBA4DROID 西游释厄传超级版 大圣归来 Xi Yo Gi Shi Re Zuang Super (Return of Monkey King 20181229)
 static struct BurnRomInfo olds100adsglRomDesc[] = {
-	{ "p0500.v10",	   		0x400000, 0xd63d9999, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+	{ "p0500.v10",	   		0x400000, 0x8ce84e5b, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
 
-	{ "t0500.rom",	   		0x400000, 0xd881726c, 2 | BRF_GRA },			//  1 Tile data
+	{ "t0500.rom",	   		0x400000, 0x434ddae8, 2 | BRF_GRA },			//  1 Tile data
 	{ "t0501.rom",	   		0x200000, 0xd2106864, 2 | BRF_GRA },			//  2
 
 	{ "a0500.rom",	   		0x400000, 0x80a59197, 3 | BRF_GRA },			//  3 Sprite Color Data
@@ -8363,12 +8361,12 @@ static struct BurnRomInfo olds100adsglRomDesc[] = {
 	{ "a0503.rom",	   		0x400000, 0x066dffec, 3 | BRF_GRA },			//  6
 	{ "a0504.rom",	   		0x400000, 0x45337583, 3 | BRF_GRA },			//  7
 	{ "a0505.rom",	   		0x400000, 0x5b8cf3a5, 3 | BRF_GRA },			//  8
-	{ "a0506.rom",	   		0x400000, 0x2e50561c, 3 | BRF_GRA },			//  9
+	{ "a0506.rom",	   		0x400000, 0x1c174e4a, 3 | BRF_GRA },			//  9
 
 	{ "b0500.rom",	   		0x400000, 0xcde07f74, 4 | BRF_GRA },			// 10 Sprite Masks & Color Indexes
 	{ "b0501.rom",	   		0x400000, 0x1546c2e9, 4 | BRF_GRA },			// 11
 	{ "b0502.rom",	   		0x400000, 0xe97b31c3, 4 | BRF_GRA },			// 12
-	{ "b0503.u16",	   		0x400000, 0x069ec4d1, 4 | BRF_GRA },			// 13
+	{ "b0503.u16",	   		0x400000, 0x4922301f, 4 | BRF_GRA },			// 13
 
 	{ "m0500.rom",	   		0x200000, 0x37928cdd, 5 | BRF_SND },			// 14 Samples
 	
