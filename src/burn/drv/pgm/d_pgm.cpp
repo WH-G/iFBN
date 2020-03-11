@@ -6088,6 +6088,198 @@ struct BurnDriver BurnDrvoldsplusnr = {
 
 //kovplus
 
+// FBA4DROID 三国战纪 正宗Plus 举世无双 Knights of Valour - Sangoku Senki (be without a rival)
+static struct BurnRomInfo kov100sRomDesc[] = {
+	{ "new_kov100s.119",     	0x400000, 0xb26d7710, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0600.rom",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "a0602.rom",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "a0603.rom",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "b0600.rom",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "m0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kov100s, kov100s, pgm)
+STD_ROM_FN(kov100s)
+
+struct BurnDriver BurnDrvKov100s = {
+	"kov100s", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (be without a rival)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kov100sRomInfo, kov100sRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗Plus 无限能量版 Knights of Valour - Sangoku Senki (Unlimited energy)
+static struct BurnRomInfo kov117maxRomDesc[] = {
+	{ "new_kov117max.119",     	0x400000, 0x33fd49c7, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0600.rom",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "a0602.rom",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "a0603.rom",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "b0600.rom",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "m0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kov117max, kov117max, pgm)
+STD_ROM_FN(kov117max)
+
+struct BurnDriver BurnDrvKov117max = {
+	"kov117max", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (Unlimited energy)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kov117maxRomInfo, kov117maxRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗2012 芳月魔雨 Knights of Valour Plus (authentic 2012 of Fang in the rain)
+static struct BurnRomInfo kov2012fymyRomDesc[] = {
+	{ "new_kov2012fymy.119",       		0x400000, 0x85e2fbe8, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0600.rom",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  5 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  6 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  7
+	{ "a0602.rom",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  8
+	{ "a0603.rom",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  9
+	
+	{ "b0600.rom",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			// 10 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			// 11
+	
+	{ "m0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			// 12 Samples	
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  // 13 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kov2012fymy, kov2012fymy, pgm)
+STD_ROM_FN(kov2012fymy)
+
+struct BurnDriver BurnDrvKov2012fymy = {
+	"kov2012fymy", "kovplus", "pgm", NULL, "2018",
+	"Knights of Valour Plus (authentic 2012 of Fang in the rain)\0", NULL, "IGS", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kov2012fymyRomInfo, kov2012fymyRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗2012 MISS版 Knights of Valour Plus (authentic 2012 of MISS)
+static struct BurnRomInfo kov2012msRomDesc[] = {
+	{ "new_kov2012ms.119",       		0x400000, 0xfec5eef0, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0600.rom",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  5 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  6 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  7
+	{ "a0602.rom",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  8
+	{ "a0603.rom",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  9
+	
+	{ "b0600.rom",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			// 10 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			// 11
+	
+	{ "m0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			// 12 Samples	
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  // 13 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kov2012ms, kov2012ms, pgm)
+STD_ROM_FN(kov2012ms)
+
+struct BurnDriver BurnDrvKov2012ms = {
+	"kov2012ms", "kovplus", "pgm", NULL, "2018",
+	"Knights of Valour Plus (authentic 2012 of MISS)\0", NULL, "IGS", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kov2012msRomInfo, kov2012msRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗2012 蜀之复兴 Knights of Valour Plus (authentic 2012 of In the Renaissance)
+static struct BurnRomInfo kov2012szfxRomDesc[] = {
+	{ "new_kov2012szfx.119",       		0x400000, 0x4aa6737f, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0600.rom",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  5 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  6 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  7
+	{ "a0602.rom",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  8
+	{ "a0603.rom",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  9
+	
+	{ "b0600.rom",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			// 10 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			// 11
+	
+	{ "m0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			// 12 Samples	
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  // 13 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kov2012szfx, kov2012szfx, pgm)
+STD_ROM_FN(kov2012szfx)
+
+struct BurnDriver BurnDrvKov2012szfx = {
+	"kov2012szfx", "kovplus", "pgm", NULL, "2018",
+	"Knights of Valour Plus (authentic 2012 of In the Renaissance)\0", NULL, "IGS", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kov2012szfxRomInfo, kov2012szfxRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗2012 魏吴传 Knights of Valour Plus (authentic 2012 of Wei Wu preach)
+static struct BurnRomInfo kov2012wwzRomDesc[] = {
+	{ "new_kov2012wwz.119",       		0x400000, 0x5681b066, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0600.rom",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  5 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  6 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  7
+	{ "a0602.rom",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  8
+	{ "a0603.rom",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  9
+	
+	{ "b0600.rom",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			// 10 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			// 11
+	
+	{ "m0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			// 12 Samples	
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  // 13 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kov2012wwz, kov2012wwz, pgm)
+STD_ROM_FN(kov2012wwz)
+
+struct BurnDriver BurnDrvKov2012wwz = {
+	"kov2012wwz", "kovplus", "pgm", NULL, "2018",
+	"Knights of Valour Plus (authentic 2012 of Wei Wu preach)\0", NULL, "IGS", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kov2012wwzRomInfo, kov2012wwzRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
 // FBA4DROID 三国战纪 正宗1V8 Knights of Valour - Sangoku Senki (1VS8 20170218)
 // Not working due to protection?
 static struct BurnRomInfo kov8RomDesc[] = {
@@ -6111,7 +6303,7 @@ static struct BurnRomInfo kov8RomDesc[] = {
 STDROMPICKEXT(kov8, kov8, pgm)
 STD_ROM_FN(kov8)
 
-struct BurnDriver BurnDrvkov8 = {
+struct BurnDriver BurnDrvKov8 = {
 	"kov8", "kovplus", "pgm", NULL, "2017",
 	"Knights of Valour Plus (1VS8 20170218)\0", "Not working!", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6143,7 +6335,7 @@ static struct BurnRomInfo kovplusxb1RomDesc[] = {
 STDROMPICKEXT(kovplusxb1, kovplusxb1, pgm)
 STD_ROM_FN(kovplusxb1)
 
-struct BurnDriver BurnDrvkovplusxb1 = {
+struct BurnDriver BurnDrvKovplusxb1 = {
 	"kovplusxb1", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour Plus (Small Soldiers Fighting for Hegemony 20181206)\0", NULL, "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6175,7 +6367,7 @@ static struct BurnRomInfo kovplusxb2RomDesc[] = {
 STDROMPICKEXT(kovplusxb2, kovplusxb2, pgm)
 STD_ROM_FN(kovplusxb2)
 
-struct BurnDriver BurnDrvkovplusxb2 = {
+struct BurnDriver BurnDrvKovplusxb2 = {
 	"kovplusxb2", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour Plus (Small Soldiers Fighting for Hegemony 2 20181206)\0", NULL, "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6207,7 +6399,7 @@ static struct BurnRomInfo kovplusxb2dsRomDesc[] = {
 STDROMPICKEXT(kovplusxb2ds, kovplusxb2ds, pgm)
 STD_ROM_FN(kovplusxb2ds)
 
-struct BurnDriver BurnDrvkovplusxb2ds = {
+struct BurnDriver BurnDrvKovplusxb2ds = {
 	"kovplusxb2ds", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour Plus (Small Soldiers Fighting for Hegemony 2 - Manito 20181207)\0", NULL, "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6239,7 +6431,7 @@ static struct BurnRomInfo kovplusxb2wjRomDesc[] = {
 STDROMPICKEXT(kovplusxb2wj, kovplusxb2wj, pgm)
 STD_ROM_FN(kovplusxb2wj)
 
-struct BurnDriver BurnDrvkovplusxb2wj = {
+struct BurnDriver BurnDrvKovplusxb2wj = {
 	"kovplusxb2wj", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour Plus (Small Soldiers Fighting for Hegemony 2 - Military Commanders 20181207)\0", NULL, "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6271,7 +6463,7 @@ static struct BurnRomInfo kovplus2017RomDesc[] = {
 STDROMPICKEXT(kovplus2017, kovplus2017, pgm)
 STD_ROM_FN(kovplus2017)
 
-struct BurnDriver BurnDrvkovplus2017 = {
+struct BurnDriver BurnDrvKovplus2017 = {
 	"kovplus2017", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour - Sangoku Senki (Hong Bo's Death 20180904)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6303,7 +6495,7 @@ static struct BurnRomInfo kovplusxtRomDesc[] = {
 STDROMPICKEXT(kovplusxt, kovplusxt, pgm)
 STD_ROM_FN(kovplusxt)
 
-struct BurnDriver BurnDrvkovplusxt = {
+struct BurnDriver BurnDrvKovplusxt = {
 	"kovplusxt", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour Plus (Unity Of China 20180515)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6335,7 +6527,7 @@ static struct BurnRomInfo kovplusdszlRomDesc[] = {
 STDROMPICKEXT(kovplusdszl, kovplusdszl, pgm)
 STD_ROM_FN(kovplusdszl)
 
-struct BurnDriver BurnDrvkovplusdszl = {
+struct BurnDriver BurnDrvKovplusdszl = {
 	"kovplusdszl", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour Plus (Road To Master 20180711)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6367,7 +6559,7 @@ static struct BurnRomInfo kovplusdjjzRomDesc[] = {
 STDROMPICKEXT(kovplusdjjz, kovplusdjjz, pgm)
 STD_ROM_FN(kovplusdjjz)
 
-struct BurnDriver BurnDrvkovplusdjjz = {
+struct BurnDriver BurnDrvKovplusdjjz = {
 	"kovplusdjjz", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour Plus (Single Savior 20180308)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6399,7 +6591,7 @@ static struct BurnRomInfo kovplus2012dwRomDesc[] = {
 STDROMPICKEXT(kovplus2012dw, kovplus2012dw, pgm)
 STD_ROM_FN(kovplus2012dw)
 
-struct BurnDriver BurnDrvkovplus2012dw = {
+struct BurnDriver BurnDrvKovplus2012dw = {
 	"kovplus2012dw", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour Plus (Unrivalled Version 20180823)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6432,7 +6624,7 @@ static struct BurnRomInfo kovplus2012mRomDesc[] = {
 STDROMPICKEXT(kovplus2012m, kovplus2012m, pgm)
 STD_ROM_FN(kovplus2012m)
 
-struct BurnDriver BurnDrvkovplus2012m = {
+struct BurnDriver BurnDrvKovplus2012m = {
 	"kovplus2012m", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour Plus (Nightmare 20180601)\0", "Not Working!", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6464,7 +6656,7 @@ static struct BurnRomInfo kovplus2012emRomDesc[] = {
 STDROMPICKEXT(kovplus2012em, kovplus2012em, pgm)
 STD_ROM_FN(kovplus2012em)
 
-struct BurnDriver BurnDrvkovplus2012em = {
+struct BurnDriver BurnDrvKovplus2012em = {
 	"kovplus2012em", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour Plus (Unrivalled God Of War 20180715)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6497,7 +6689,7 @@ static struct BurnRomInfo kovplus2012stRomDesc[] = {
 STDROMPICKEXT(kovplus2012st, kovplus2012st, pgm)
 STD_ROM_FN(kovplus2012st)
 
-struct BurnDriver BurnDrvkovplus2012st = {
+struct BurnDriver BurnDrvKovplus2012st = {
 	"kovplus2012st", "kovplus", "pgm", NULL, "2018",
 	"Knights of Valour Plus (God Of War ST 20180716)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6535,7 +6727,7 @@ static struct BurnRomInfo kovshzlzyRomDesc[] = {
 STDROMPICKEXT(kovshzlzy, kovshzlzy, pgm)
 STD_ROM_FN(kovshzlzy)
 
-struct BurnDriver BurnDrvkovshzlzy = {
+struct BurnDriver BurnDrvKovshzlzy = {
 	"kovshzlzy", "kovsh", "pgm", NULL, "2018",
 	"Knights of Valour Superheroes (Fight For Territory In Ancient Central China 20180307)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6570,7 +6762,7 @@ static struct BurnRomInfo kovshzlzyjzRomDesc[] = {
 STDROMPICKEXT(kovshzlzyjz, kovshzlzyjz, pgm)
 STD_ROM_FN(kovshzlzyjz)
 
-struct BurnDriver BurnDrvkovshzlzyjz = {
+struct BurnDriver BurnDrvKovshzlzyjz = {
 	"kovshzlzyjz", "kovsh", "pgm", NULL, "2018",
 	"Knights of Valour Superheroes (A Decisive Battle Over The World 20181202)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6605,7 +6797,7 @@ static struct BurnRomInfo kovshzlzywjRomDesc[] = {
 STDROMPICKEXT(kovshzlzywj, kovshzlzywj, pgm)
 STD_ROM_FN(kovshzlzywj)
 
-struct BurnDriver BurnDrvkovshzlzywj = {
+struct BurnDriver BurnDrvKovshzlzywj = {
 	"kovshzlzywj", "kovsh", "pgm", NULL, "2018",
 	"Knights of Valour Superheroes (Legend Of Five Swords 20181203)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6640,7 +6832,7 @@ static struct BurnRomInfo kovshzlzymyRomDesc[] = {
 STDROMPICKEXT(kovshzlzymy, kovshzlzymy, pgm)
 STD_ROM_FN(kovshzlzymy)
 
-struct BurnDriver BurnDrvkovshzlzymy = {
+struct BurnDriver BurnDrvKovshzlzymy = {
 	"kovshzlzymy", "kovsh", "pgm", NULL, "2019",
 	"Knights of Valour Superheroes (Fight For Territory In Ancient Central China - Legend Of Mo Ye 20190102)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6674,7 +6866,7 @@ static struct BurnRomInfo kovshsjcsRomDesc[] = {
 STDROMPICKEXT(kovshsjcs, kovshsjcs, pgm)
 STD_ROM_FN(kovshsjcs)
 
-struct BurnDriver BurnDrvkovshsjcs = {
+struct BurnDriver BurnDrvKovshsjcs = {
 	"kovshsjcs", "kovsh", "pgm", NULL, "2018",
 	"Knights of Valour Superheroes (Legend Of Four Swords 20151105)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6705,7 +6897,7 @@ static struct BurnRomInfo kovshpp19RomDesc[] = {
 STDROMPICKEXT(kovshpp19, kovshpp19, pgm)
 STD_ROM_FN(kovshpp19)
 
-struct BurnDriver BurnDrvkovshpp19 = {
+struct BurnDriver BurnDrvKovshpp19 = {
 	"kovshpp19", "kovshp", "pgm", NULL, "2019",
 	"Knights of Valour Super Heroes Plus (Plus 20190105)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6734,7 +6926,7 @@ static struct BurnRomInfo kovshpqxzqjRomDesc[] = {
 STDROMPICKEXT(kovshpqxzqj, kovshpqxzqj, pgm)
 STD_ROM_FN(kovshpqxzqj)
 
-struct BurnDriver BurnDrvkovshpqxzqj = {
+struct BurnDriver BurnDrvKovshpqxzqj = {
 	"kovshpqxzqj", "kovshp", "pgm", NULL, "2019",
 	"Knights of Valour Super Heroes Plus (Rerise of Heroes Gold 20190404)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6763,7 +6955,7 @@ static struct BurnRomInfo kovshp1v4xRomDesc[] = {
 STDROMPICKEXT(kovshp1v4x, kovshp1v4x, pgm)
 STD_ROM_FN(kovshp1v4x)
 
-struct BurnDriver BurnDrvkovshp1v4x = {
+struct BurnDriver BurnDrvKovshp1v4x = {
 	"kovshp1v4x", "kovshp", "pgm", NULL, "2019",
 	"Knights of Valour Super Heroes Plus (Incredible God of War 20190312)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6797,7 +6989,7 @@ static struct BurnRomInfo kovshpqxzqRomDesc[] = {
 STDROMPICKEXT(kovshpqxzq, kovshpqxzq, pgm)
 STD_ROM_FN(kovshpqxzq)
 
-struct BurnDriver BurnDrvkovshpqxzq = {
+struct BurnDriver BurnDrvKovshpqxzq = {
 	"kovshpqxzq", "kovshp", "pgm", NULL, "2019",
 	"Knights of Valour Super Heroes Plus / Sangoku Senki Super Heroes Plus (Rerise of Heroes 20190130)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6829,7 +7021,7 @@ static struct BurnRomInfo kovytzypRomDesc[] = {
 STDROMPICKEXT(kovytzyp, kovytzyp, pgm)
 STD_ROM_FN(kovytzyp)
 
-struct BurnDriver BurnDrvkovytzyp = {
+struct BurnDriver BurnDrvKovytzyp = {
 	"kovytzyp", NULL, "pgm", NULL, "2019",
 	"Knights of Valour  - Yi Tong Zhong Yuan (Plus 20190216)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6858,7 +7050,7 @@ static struct BurnRomInfo kovshp1v4xtwRomDesc[] = {
 STDROMPICKEXT(kovshp1v4xtw, kovshp1v4xtw, pgm)
 STD_ROM_FN(kovshp1v4xtw)
 
-struct BurnDriver BurnDrvkovshp1v4xtw = {
+struct BurnDriver BurnDrvKovshp1v4xtw = {
 	"kovshp1v4xtw", "kovshp", "pgm", NULL, "2019",
 	"Knights of Valour Super Heroes Plus (Incredible God of War - Sky King 20190228)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6887,7 +7079,7 @@ static struct BurnRomInfo kovshptplscsRomDesc[] = {
 STDROMPICKEXT(kovshptplscs, kovshptplscs, pgm)
 STD_ROM_FN(kovshptplscs)
 
-struct BurnDriver BurnDrvkovshptplscs = {
+struct BurnDriver BurnDrvKovshptplscs = {
 	"kovshptplscs", "kovshp", "pgm", NULL, "2019",
 	"Knights of Valour Super Heroes Plus (Peace In Chaotic Times - Legend 20190321)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6916,7 +7108,7 @@ static struct BurnRomInfo kovshpwsbRomDesc[] = {
 STDROMPICKEXT(kovshpwsb, kovshpwsb, pgm)
 STD_ROM_FN(kovshpwsb)
 
-struct BurnDriver BurnDrvkovshpwsb = {
+struct BurnDriver BurnDrvKovshpwsb = {
 	"kovshpwsb", "kovshp", "pgm", NULL, "2019",
 	"Knights of Valour Super Heroes Plus (Unrivalled Version 20190319)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6948,7 +7140,7 @@ static struct BurnRomInfo kovshpd19RomDesc[] = {
 STDROMPICKEXT(kovshpd19, kovshpd19, pgm)
 STD_ROM_FN(kovshpd19)
 
-struct BurnDriver BurnDrvkovshpd19 = {
+struct BurnDriver BurnDrvKovshpd19 = {
 	"kovshpd19", "kovshp", "pgm", NULL, "2019",
 	"Knights of Valour Super Heroes Plus (Plus v1.9 - Sky King 20190320)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -6980,7 +7172,7 @@ static struct BurnRomInfo kovshpbRomDesc[] = {
 STDROMPICKEXT(kovshpb, kovshpb, pgm)
 STD_ROM_FN(kovshpb)
 
-struct BurnDriver BurnDrvkovshpb = {
+struct BurnDriver BurnDrvKovshpb = {
 	"kovshpb", "kovshp", "pgm", NULL, "2018",
 	"Knights of Valour Super Heroes Plus (Zhao Yun Version 103 20180922)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7063,7 +7255,7 @@ static struct BurnRomInfo kovshpqszlRomDesc[] = {
 STDROMPICKEXT(kovshpqszl, kovshpqszl, pgm)
 STD_ROM_FN(kovshpqszl)
 
-struct BurnDriver BurnDrvkovshpqszl = {
+struct BurnDriver BurnDrvKovshpqszl = {
 	"kovshpqszl", NULL, "pgm", NULL, "2018",
 	"Knights of Valour Super Heroes Plus (Road To Survival 20180224)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7096,7 +7288,7 @@ static struct BurnRomInfo kovshpqszltwRomDesc[] = {
 STDROMPICKEXT(kovshpqszltw, kovshpqszltw, pgm)
 STD_ROM_FN(kovshpqszltw)
 
-struct BurnDriver BurnDrvkovshpqszltw = {
+struct BurnDriver BurnDrvKovshpqszltw = {
 	"kovshpqszltw", "kovshpqszl", "pgm", NULL, "2019",
 	"Knights of Valour Super Heroes Plus (Road To Survival - Sky King 20190319)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7232,7 +7424,7 @@ static struct BurnRomInfo kovshwsglRomDesc[] = {
 STDROMPICKEXT(kovshwsgl, kovshwsgl, pgm)
 STD_ROM_FN(kovshwsgl)
 
-struct BurnDriver BurnDrvkovshwsgl = {
+struct BurnDriver BurnDrvKovshwsgl = {
 	"kovshwsgl", "kovsh", "pgm", NULL, "2015",
 	"Knights of Valour Superheroes (Legend Of Moonlight 20151105)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7266,7 +7458,7 @@ static struct BurnRomInfo kovshpdxRomDesc[] = {
 STDROMPICKEXT(kovshpdx, kovshpdx, pgm)
 STD_ROM_FN(kovshpdx)
 
-struct BurnDriver BurnDrvkovshpdx = {
+struct BurnDriver BurnDrvKovshpdx = {
 	"kovshpdx", "kovshp", "pgm", NULL, "2017",
 	"Knights of Valour Super Heroes Plus (Bloody Battle Against All Quarters 20170801)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7298,7 +7490,7 @@ static struct BurnRomInfo kovshp1v4RomDesc[] = {
 STDROMPICKEXT(kovshp1v4, kovshp1v4, pgm)
 STD_ROM_FN(kovshp1v4)
 
-struct BurnDriver BurnDrvkovshp1v4 = {
+struct BurnDriver BurnDrvKovshp1v4 = {
 	"kovshp1v4", "kovshp", "pgm", NULL, "2017",
 	"Knights of Valour Super Heroes Plus (Twilight for the Gods 20170323)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7330,7 +7522,7 @@ static struct BurnRomInfo kovshp1v4sRomDesc[] = {
 STDROMPICKEXT(kovshp1v4s, kovshp1v4s, pgm)
 STD_ROM_FN(kovshp1v4s)
 
-struct BurnDriver BurnDrvkovshp1v4s = {
+struct BurnDriver BurnDrvKovshp1v4s = {
 	"kovshp1v4s", "kovshp", "pgm", NULL, "2018",
 	"Knights of Valour Super Heroes Plus (Twilight for the Gods - Dawn 20180506)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7363,7 +7555,7 @@ static struct BurnRomInfo kovytzyftxqRomDesc[] = {
 STDROMPICKEXT(kovytzyftxq, kovytzyftxq, pgm)
 STD_ROM_FN(kovytzyftxq)
 
-struct BurnDriver BurnDrvkovytzyftxq = {
+struct BurnDriver BurnDrvKovytzyftxq = {
 	"kovytzyftxq", NULL, "pgm", NULL, "2018",
 	"Knights of Valour - Yi Tong Zhong Yuan (Blue Version) (20181209)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7395,7 +7587,7 @@ static struct BurnRomInfo kovshptxRomDesc[] = {
 STDROMPICKEXT(kovshptx, kovshptx, pgm)
 STD_ROM_FN(kovshptx)
 
-struct BurnDriver BurnDrvkovshptx = {
+struct BurnDriver BurnDrvKovshptx = {
 	"kovshptx", "kovshp", "pgm", NULL, "2019",
 	"Knights of Valour Super Heroes Plus ( Ambitious Heroes Over The World 2019 20190301)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7433,7 +7625,7 @@ static struct BurnRomInfo kov2pcthlRomDesc[] = {
 STDROMPICKEXT(kov2pcthl, kov2pcthl, pgm)
 STD_ROM_FN(kov2pcthl)
 
-struct BurnDriver BurnDrvkov2pcthl = {
+struct BurnDriver BurnDrvKov2pcthl = {
 	"kov2pcthl", "kov2p", "pgm", NULL, "2019",
 	"Knights of Valour 2 Plus - Nine Dragons (Heaven Route 20190120)\0", NULL, "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7469,12 +7661,47 @@ static struct BurnRomInfo kov2pswcqRomDesc[] = {
 STDROMPICKEXT(kov2pswcq, kov2pswcq, pgm)
 STD_ROM_FN(kov2pswcq)
 
-struct BurnDriver BurnDrvkov2pswcq = {
+struct BurnDriver BurnDrvKov2pswcq = {
 	"kov2pswcq", "kov2p", "pgm", NULL, "2019",
 	"Knights of Valour 2 Plus - Nine Dragons (Legend of Conquering Generals 20190120)\0", NULL, "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
 	NULL, kov2pswcqRomInfo, kov2pswcqRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kov2pInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪2p 天火明名 Knights of Valour 2 Plus - (Skyfire name)
+static struct BurnRomInfo kov2pmemmRomDesc[] = {
+	{ "v204-32m.dec",  		0x400000, 0x7f4b8e0b, 1 | BRF_PRG | BRF_ESS },  ////  0 68K Code
+
+	{ "t1200.rom",	   		0x800000, 0xd7e26609, 2 | BRF_GRA },			//  1 Tile data
+
+	{ "a1200.rom",	   		0x800000, 0xceeb81d8, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a1201.rom",   		0x800000, 0x21063ca7, 3 | BRF_GRA },			//  3
+	{ "a1202.rom",	   		0x800000, 0x4bb92fae, 3 | BRF_GRA },			//  4
+	{ "a1203.rom",	   		0x800000, 0xe73cb627, 3 | BRF_GRA },			//  5
+	{ "a1204.rom",   		0x200000, 0x14b4b5bb, 3 | BRF_GRA },			//  6
+
+	{ "b1200.rom",	   		0x800000, 0xbed7d994, 4 | BRF_GRA },			//  7 Sprite Masks & Color Indexes
+	{ "b1201.rom",	   		0x800000, 0xf251eb57, 4 | BRF_GRA },			//  8
+
+	{ "m1200.rom",	   		0x800000, 0xb0d88720, 5 | BRF_SND },			//  9 Samples
+
+	{ "kov2p_igs027a_china.bin",	0x004000, 0x19a0bd95, 7 | BRF_PRG | BRF_ESS },  // 10 Internal ARM7 Rom
+
+	{ "v200-16.rom",   		0x200000, 0x16a0c11f, 8 | BRF_PRG | BRF_ESS },  // 11 External ARM7 Rom
+};
+
+STDROMPICKEXT(kov2pmemm, kov2pmemm, pgm)
+STD_ROM_FN(kov2pmemm)
+
+struct BurnDriver BurnDrvKov2pmemm = {
+	"kov2pmemm", "kov2p", "pgm", NULL, "2018",
+	"Knights of Valour 2 Plus - (Skyfire name)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
+	NULL, kov2pmemmRomInfo, kov2pmemmRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
 	kov2pInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
 	448, 224, 4, 3
 };
@@ -7504,7 +7731,7 @@ static struct BurnRomInfo kov2pmessRomDesc[] = {
 STDROMPICKEXT(kov2pmess, kov2pmess, pgm)
 STD_ROM_FN(kov2pmess)
 
-struct BurnDriver BurnDrvkov2pmess = {
+struct BurnDriver BurnDrvKov2pmess = {
 	"kov2pmess", "kov2p", "pgm", NULL, "2018",
 	"Knights of Valour 2 Plus - (Soul Stripping 20181030)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7539,7 +7766,7 @@ static struct BurnRomInfo kov2pjlcqRomDesc[] = {
 STDROMPICKEXT(kov2pjlcq, kov2pjlcq, pgm)
 STD_ROM_FN(kov2pjlcq)
 
-struct BurnDriver BurnDrvkov2pjlcq = {
+struct BurnDriver BurnDrvKov2pjlcq = {
 	"kov2pjlcq", "kov2p", "pgm", NULL, "2018",
 	"Knights of Valour 2 Plus - (Legend Of Nine Dragons 20180924)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7609,7 +7836,7 @@ static struct BurnRomInfo kov2pplusRomDesc[] = {
 STDROMPICKEXT(kov2pplus, kov2pplus, pgm)
 STD_ROM_FN(kov2pplus)
 
-struct BurnDriver BurnDrvkov2pplus = {
+struct BurnDriver BurnDrvKov2pplus = {
 	"kov2pplus", "kov2p", "pgm", NULL, "2018",
 	"Knights of Valour 2 Plus - (Dynasty Warriors 20180614)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7644,7 +7871,7 @@ static struct BurnRomInfo kov2ppwsRomDesc[] = {
 STDROMPICKEXT(kov2ppws, kov2ppws, pgm)
 STD_ROM_FN(kov2ppws)
 
-struct BurnDriver BurnDrvkov2ppws = {
+struct BurnDriver BurnDrvKov2ppws = {
 	"kov2ppws", "kov2p", "pgm", NULL, "2018",
 	"Knights of Valour 2 Plus - (Unrivaled In The World 20180819)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7679,7 +7906,7 @@ static struct BurnRomInfo kov2ppws2016RomDesc[] = {
 STDROMPICKEXT(kov2ppws2016, kov2ppws2016, pgm)
 STD_ROM_FN(kov2ppws2016)
 
-struct BurnDriver BurnDrvkov2ppws2016 = {
+struct BurnDriver BurnDrvKov2ppws2016 = {
 	"kov2ppws2016", "kov2p", "pgm", NULL, "2018",
 	"Knights of Valour 2 Plus - (Unrivaled In The World 2016 20180727)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7714,7 +7941,7 @@ static struct BurnRomInfo kov2pfwlyRomDesc[] = {
 STDROMPICKEXT(kov2pfwly, kov2pfwly, pgm)
 STD_ROM_FN(kov2pfwly)
 
-struct BurnDriver BurnDrvkov2pfwly = {
+struct BurnDriver BurnDrvKov2pfwly = {
 	"kov2pfwly", "kov2p", "pgm", NULL, "2018",
 	"Knights of Valour 2 Plus - (Feng Ye Yuan Qing 20180728)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7758,7 +7985,7 @@ static struct BurnRomInfo olds100adsglRomDesc[] = {
 STDROMPICKEXT(olds100adsgl, olds100adsgl, pgm)
 STD_ROM_FN(olds100adsgl)
 
-struct BurnDriver BurnDrvolds100adsgl = {
+struct BurnDriver BurnDrvOlds100adsgl = {
 	"olds100adsgl", "olds", "pgm", NULL, "2018",
 	"Xi Yo Gi Shi Re Zuang Super (Return of Monkey King 20181229)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7800,7 +8027,7 @@ static struct BurnRomInfo olds100afybhRomDesc[] = {
 STDROMPICKEXT(olds100afybh, olds100afybh, pgm)
 STD_ROM_FN(olds100afybh)
 
-struct BurnDriver BurnDrvolds100afybh = {
+struct BurnDriver BurnDrvOlds100afybh = {
 	"olds100afybh", "olds", "pgm", NULL, "2015",
 	"Xi Yo Gi Shi Re Zuang Super (Unparalleled In The World, GOTVG 20150203)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7842,7 +8069,7 @@ static struct BurnRomInfo olds100aylzxRomDesc[] = {
 STDROMPICKEXT(olds100aylzx, olds100aylzx, pgm)
 STD_ROM_FN(olds100aylzx)
 
-struct BurnDriver BurnDrvolds100aylzx = {
+struct BurnDriver BurnDrvOlds100aylzx = {
 	"olds100aylzx", "olds", "pgm", NULL, "2019",
 	"Oriental Legend Special - Xi Yo Gi Shi Re Zuang Super (Breath of Yuan Ling 20190129)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7884,7 +8111,7 @@ static struct BurnRomInfo olds100aemRomDesc[] = {
 STDROMPICKEXT(olds100aem, olds100aem, pgm)
 STD_ROM_FN(olds100aem)
 
-struct BurnDriver BurnDrvolds100aem = {
+struct BurnDriver BurnDrvOlds100aem = {
 	"olds100aem", "olds", "pgm", NULL, "2018",
 	"Xi Yo Gi Shi Re Zuang Super (Unrivalled Version 20181030)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7926,7 +8153,7 @@ static struct BurnRomInfo olds100aem2015RomDesc[] = {
 STDROMPICKEXT(olds100aem2015, olds100aem2015, pgm)
 STD_ROM_FN(olds100aem2015)
 
-struct BurnDriver BurnDrvolds100aem2015 = {
+struct BurnDriver BurnDrvOlds100aem2015 = {
 	"olds100aem2015", "olds", "pgm", NULL, "2018",
 	"Xi Yo Gi Shi Re Zuang Super (Survival In Nightmare 2015 20180823)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -7968,7 +8195,7 @@ static struct BurnRomInfo olds100aem2016RomDesc[] = {
 STDROMPICKEXT(olds100aem2016, olds100aem2016, pgm)
 STD_ROM_FN(olds100aem2016)
 
-struct BurnDriver BurnDrvolds100aem2016 = {
+struct BurnDriver BurnDrvOlds100aem2016 = {
 	"olds100aem2016", "olds", "pgm", NULL, "2018",
 	"Xi Yo Gi Shi Re Zuang Super (Survival In Nightmare 2017 20180927)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -8010,7 +8237,7 @@ static struct BurnRomInfo olds100asrpRomDesc[] = {
 STDROMPICKEXT(olds100asrp, olds100asrp, pgm)
 STD_ROM_FN(olds100asrp)
 
-struct BurnDriver BurnDrvolds100asrp = {
+struct BurnDriver BurnDrvOlds100asrp = {
 	"olds100asrp", "olds", "pgm", NULL, "2018",
 	"Xi Yo Gi Shi Re Zuang Super (Remix Plus 20180927)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -8043,7 +8270,7 @@ static struct BurnRomInfo orlegndcmmRomDesc[] = {
 STDROMPICKEXT(orlegndcmm, orlegndcmm, pgm)
 STD_ROM_FN(orlegndcmm)
 
-struct BurnDriver BurnDrvorlegndcmm = {
+struct BurnDriver BurnDrvOrlegndcmm = {
 	"orlegndcmm", "orlegend", "pgm", NULL, "2018",
 	"Xi Yo Gi Shi Re Zuang (Boss Rush Edition 20180716)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -8075,7 +8302,7 @@ static struct BurnRomInfo oldsplushmfRomDesc[] = {
 STDROMPICKEXT(oldsplushmf, oldsplushmf, pgm)
 STD_ROM_FN(oldsplushmf)
 
-struct BurnDriver BurnDrvoldsplushmf = {
+struct BurnDriver BurnDrvOldsplushmf = {
 	"oldsplushmf", "oldsplus", "pgm", NULL, "2018",
 	"Xi Yo Gi Shi Re Zuang (Yellow Hat Subduing Devils 20180802)\0", "Incomplete Dump", "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
@@ -8111,7 +8338,7 @@ static struct BurnRomInfo killbldqyRomDesc[] = {
 STDROMPICKEXT(killbldqy, killbldqy, pgm)
 STD_ROM_FN(killbldqy)
 
-struct BurnDriver BurnDrvkillbldqy = {
+struct BurnDriver BurnDrvKillbldqy = {
 	"killbldqy", "killbld", "pgm", NULL, "2018",
 	"The Killing Blade (Heroes 20180622)\0", NULL, "hack", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
