@@ -6819,7 +6819,7 @@ static struct BurnRomInfo kovplus2012mpRomDesc[] = {
 	{ "b0600.rom",     		0x800000, 0xe0a70b54, 4 | BRF_GRA },
 	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },
 	
-	{ "m0600.rom",     		0x455000, 0x132765c9, 5 | BRF_SND },
+	{ "m0600.rom",     		0x454f47, 0x132765c9, 5 | BRF_SND },  // Incorrect size ???
 	
 	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
 };
@@ -7729,7 +7729,7 @@ struct BurnDriver BurnDrvKovshpd3 = {
 
 // FBA4DROID 三国战纪 乱世英雄 群雄逐鹿 天王版 Knights of Valour Super Heroes Plus (Powerful Politicians Fighting For Supremacy - Sky King 20190319)
 static struct BurnRomInfo kovshpd3twRomDesc[] = {
-	{ "p0600h.rom",			0x400800, 0xc8f14031, 1 | BRF_PRG | BRF_ESS },  // Incorrect size ???
+	{ "p0600h.rom",			0x4004b2, 0x2727409c, 1 | BRF_PRG | BRF_ESS },  // Incorrect size ???
 
 	{ "t0600.rom",    		0x800000, 0xa919ec0f, 2 | BRF_GRA },
 
