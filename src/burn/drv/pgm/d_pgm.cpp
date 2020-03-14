@@ -6088,6 +6088,458 @@ struct BurnDriver BurnDrvoldsplusnr = {
 
 //kovplus
 
+// FBA4DROID 三国战纪 正宗2012 小兵版 Knights of Valour - Sangoku Senki (batman)
+static struct BurnRomInfo kovplusxbRomDesc[] = {
+	{ "new_kovplusxb.119",     	0x400000, 0xf8cd3baa, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "pgm_t0600.u11",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "pgm_a0600.u2",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "pgm_a0601.u4",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "pgm_a0602.u6",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "pgm_a0603.u9",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "pgm_b0600.u5",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "pgm_b0601.u7",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "pgm_m0600.u3",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplusxb, kovplusxb, pgm)
+STD_ROM_FN(kovplusxb)
+
+struct BurnDriver BurnDrvKovplusxb = {
+	"kovplusxb", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (batman)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplusxbRomInfo, kovplusxbRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 加强版 Knights of Valour (reinforce)
+static struct BurnRomInfo kovplussRomDesc[] = {
+	{ "p0600s.119",     	0x400000, 0xb6babb70, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "pgm_t0600.u11",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "pgm_a0600.u2",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "pgm_a0601.u4",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "pgm_a0602.u6",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "pgm_a0603.u9",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "pgm_b0600.u5",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "pgm_b0601.u7",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "pgm_m0600.u3",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovpluss, kovpluss, pgm)
+STD_ROM_FN(kovpluss)
+
+struct BurnDriver BurnDrvKovpluss = {
+	"kovpluss", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour (reinforce)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplussRomInfo, kovplussRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗Plus 双儿之梦 Knights of Valour - Sangoku Senki (Sonya dream)
+static struct BurnRomInfo kovpluspjzmRomDesc[] = {
+	{ "new_kovpluspjzm.119",     	0x400000, 0x9825528d, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "pgm_t0600.u11",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "pgm_a0600.u2",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "pgm_a0601.u4",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "pgm_a0602.u6",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "pgm_a0603.u9",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "pgm_b0600.u5",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "pgm_b0601.u7",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "pgm_m0600.u3",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovpluspjzm, kovpluspjzm, pgm)
+STD_ROM_FN(kovpluspjzm)
+
+struct BurnDriver BurnDrvKovpluspjzm = {
+	"kovpluspjzm", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (Sonya dream)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovpluspjzmRomInfo, kovpluspjzmRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战记 119S版 Knights of Valour - Sangoku Senki (119s)
+static struct BurnRomInfo kovplusmssRomDesc[] = {
+	{ "t0601X.rom",     	0x200000, 0x5250ac34, 1 | BRF_PRG | BRF_ESS },  //  0-1 68K Code
+	{ "t0602X.rom",     	0x200000, 0x1096ed5a, 1 | BRF_PRG | BRF_ESS },  //  0-2 68K Code
+
+	{ "m0600.rom",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "a0602.rom",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "a0603.rom",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "b0600.rom",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "p0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplusmss, kovplusmss, pgm)
+STD_ROM_FN(kovplusmss)
+
+struct BurnDriver BurnDrvKovplusmss = {
+	"kovplusmss", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (119s)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplusmssRomInfo, kovplusmssRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗119 秒杀版 Knights of Valour - Sangoku Senki (seckill of 119)
+static struct BurnRomInfo kovplusmsRomDesc[] = {
+	{ "p0600.119",     	0x400004, 0x2fe3efe0, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "pgm_t0600.u11",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "pgm_a0600.u2",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "pgm_a0601.u4",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "pgm_a0602.u6",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "pgm_a0603.u9",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "pgm_b0600.u5",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "pgm_b0601.u7",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "pgm_m0600.u3",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplusms, kovplusms, pgm)
+STD_ROM_FN(kovplusms)
+
+struct BurnDriver BurnDrvKovplusms = {
+	"kovplusms", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (seckill of 119)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplusmsRomInfo, kovplusmsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗Plus 加强版 Knights of Valour - Sangoku Senki (plus of reinforce)
+static struct BurnRomInfo kovplusjqRomDesc[] = {
+	{ "new_kovplusjq.119",     	0x400000, 0xd31ca6ca, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "pgm_t0600.u11",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "pgm_a0600.u2",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "pgm_a0601.u4",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "pgm_a0602.u6",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "pgm_a0603.u9",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "pgm_b0600.u5",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "pgm_b0601.u7",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "pgm_m0600.u3",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplusjq, kovplusjq, pgm)
+STD_ROM_FN(kovplusjq)
+
+struct BurnDriver BurnDrvKovplusjq = {
+	"kovplusjq", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (plus of reinforce)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplusjqRomInfo, kovplusjqRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗2007 集气快 Knights of Valour - Sangoku Senki (Gas collecting fast of 2007)
+static struct BurnRomInfo kovplusf2RomDesc[] = {
+	{ "p0600.119",     	0x400000, 0xa69cc555, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "pgm_t0600.u11",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "pgm_a0600.u2",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "pgm_a0601.u4",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "pgm_a0602.u6",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "pgm_a0603.u9",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "pgm_b0600.u5",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "pgm_b0601.u7",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "pgm_m0600.u3",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplusf2, kovplusf2, pgm)
+STD_ROM_FN(kovplusf2)
+
+struct BurnDriver BurnDrvKovplusf2 = {
+	"kovplusf2", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (Gas collecting fast of 2007)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplusf2RomInfo, kovplusf2RomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 集气快 Knights of Valour - Sangoku Senki (Gas collecting fast)
+static struct BurnRomInfo kovplusfRomDesc[] = {
+	{ "p0600.119",     	0x400000, 0x74d4c301, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "pgm_t0600.u11",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "pgm_a0600.u2",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "pgm_a0601.u4",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "pgm_a0602.u6",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "pgm_a0603.u9",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "pgm_b0600.u5",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "pgm_b0601.u7",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "pgm_m0600.u3",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplusf, kovplusf, pgm)
+STD_ROM_FN(kovplusf)
+
+struct BurnDriver BurnDrvKovplusf = {
+	"kovplusf", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (Gas collecting fast)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplusfRomInfo, kovplusfRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战记 无双2020 Knights of Valour - Sangoku Senki (unparalleled of 2020)
+static struct BurnRomInfo kovplus2020wsRomDesc[] = {
+	{ "p0601.rom",     	0x200000, 0xe31dd5cf, 1 | BRF_PRG | BRF_ESS },  //  0-1 68K Code
+	{ "p0602.rom",     	0x200000, 0x3a832370, 1 | BRF_PRG | BRF_ESS },  //  0-2 68K Code
+
+	{ "t0600.rom",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "a0602.rom",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "a0603.rom",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "b0600.rom",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "m0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplus2020ws, kovplus2020ws, pgm)
+STD_ROM_FN(kovplus2020ws)
+
+struct BurnDriver BurnDrvKovplus2020ws = {
+	"kovplus2020ws", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (unparalleled of 2020)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplus2020wsRomInfo, kovplus2020wsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗2012 战神ST 天王版 Knights of Valour - Sangoku Senki (ST of king)
+static struct BurnRomInfo kovplus2012sttwRomDesc[] = {
+	{ "p0600.sttw",     	0x400000, 0x8739afd3, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0600.rom",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0x24091941, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0x8998680f, 3 | BRF_GRA },			//  3
+	{ "a0602.rom",     		0x800000, 0x27a93ff6, 3 | BRF_GRA },			//  4
+	{ "a0603.rom",     		0x400000, 0x5e00a709, 3 | BRF_GRA },			//  5
+	
+	{ "b0600.rom",     		0x800000, 0x1ce751b1, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0x912acd06, 4 | BRF_GRA },			//  7
+	
+	{ "m0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplus2012sttw, kovplus2012sttw, pgm)
+STD_ROM_FN(kovplus2012sttw)
+
+struct BurnDriver BurnDrvKovplus2012sttw = {
+	"kovplus2012sttw", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (ST of king)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplus2012sttwRomInfo, kovplus2012sttwRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 2012S版 Knights of Valour - Sangoku Senki (s)
+static struct BurnRomInfo kovplus2012sRomDesc[] = {
+	{ "t0601X.rom",     	0x200000, 0x8094326c, 1 | BRF_PRG | BRF_ESS },  //  0-1 68K Code
+	{ "t0602X.rom",     	0x200000, 0x7e1894bf, 1 | BRF_PRG | BRF_ESS },  //  0-2 68K Code
+
+	{ "m0600.rom",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "a0602.rom",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "a0603.rom",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "b0600.rom",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "p0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplus2012s, kovplus2012s, pgm)
+STD_ROM_FN(kovplus2012s)
+
+struct BurnDriver BurnDrvKovplus2012s = {
+	"kovplus2012s", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (s)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplus2012sRomInfo, kovplus2012sRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗2012 琴双情殇 Knights of Valour - Sangoku Senki (Jean double weakness)
+static struct BurnRomInfo kovplus2012qsRomDesc[] = {
+	{ "new_kovplus2012qs.119",     	0x400000, 0x076c63ee, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "pgm_t0600.u11",     		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "pgm_a0600.u2",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "pgm_a0601.u4",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "pgm_a0602.u6",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "pgm_a0603.u9",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "pgm_b0600.u5",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "pgm_b0601.u7",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "pgm_m0600.u3",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplus2012qs, kovplus2012qs, pgm)
+STD_ROM_FN(kovplus2012qs)
+
+struct BurnDriver BurnDrvKovplus2012qs = {
+	"kovplus2012qs", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (Jean double weakness)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplus2012qsRomInfo, kovplus2012qsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 2012 加强版 Knights of Valour - Sangoku Senki (reinforce)
+static struct BurnRomInfo kovplus2012pRomDesc[] = {
+	{ "p0600.p",     	0x400000, 0xd827c0a4, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0600.rom",     		0x800000, 0xf2d16aeb, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0xff7a4373, 3 | BRF_GRA },			//  3
+	{ "a0602.rom",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "a0603.rom",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "b0600.rom",     		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	
+	{ "m0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplus2012p, kovplus2012p, pgm)
+STD_ROM_FN(kovplus2012p)
+
+struct BurnDriver BurnDrvKovplus2012p = {
+	"kovplus2012p", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (reinforce)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplus2012pRomInfo, kovplus2012pRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 正宗2012 战神无双 加强版 Knights of Valour - Sangoku Senki (Ares unique of reinforce)
+static struct BurnRomInfo kovplus2012empRomDesc[] = {
+	{ "p0600.zsp",     	0x400000, 0xdbfa4aa1, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0600.rom",     		0x800000, 0x14f36f10, 2 | BRF_GRA },			//  1 Tile data
+	
+	{ "a0600.rom",     		0x800000, 0x24091941, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0601.rom",     		0x800000, 0x8998680f, 3 | BRF_GRA },			//  3
+	{ "a0602.rom",     		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "a0603.rom",     		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
+	
+	{ "b0600.rom",     		0x800000, 0x1ce751b1, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "b0601.rom",     		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  7
+	{ "b0602.rom",     		0x800000, 0x2407290e, 4 | BRF_GRA },			//  Extend
+	
+	{ "m0600.rom",     		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
+	
+	{ "kov_igs027a.bin", 	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplus2012emp, kovplus2012emp, pgm)
+STD_ROM_FN(kovplus2012emp)
+
+struct BurnDriver BurnDrvKovplus2012emp = {
+	"kovplus2012emp", "kovplus", "pgm", NULL, "2017",
+	"Knights of Valour - Sangoku Senki (Ares unique of reinforce)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, kovplus2012empRomInfo, kovplus2012empRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
 // FBA4DROID 三国战纪 正宗Plus 举世无双 Knights of Valour - Sangoku Senki (be without a rival)
 static struct BurnRomInfo kov100sRomDesc[] = {
 	{ "new_kov100s.119",     	0x400000, 0xb26d7710, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code

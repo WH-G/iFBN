@@ -13926,6 +13926,20 @@ DRV		BurnDrvZzyzzyxx2;
 
 
 DRV		BurnDrvKillbldqy;
+DRV		BurnDrvKovplusxb;
+DRV		BurnDrvKovpluss;
+DRV		BurnDrvKovpluspjzm;
+DRV		BurnDrvKovplusmss;
+DRV		BurnDrvKovplusms;
+DRV		BurnDrvKovplusjq;
+DRV		BurnDrvKovplusf2;
+DRV		BurnDrvKovplusf;
+DRV		BurnDrvKovplus2020ws;
+DRV		BurnDrvKovplus2012sttw;
+DRV		BurnDrvKovplus2012s;
+DRV		BurnDrvKovplus2012qs;
+DRV		BurnDrvKovplus2012p;
+DRV		BurnDrvKovplus2012emp;
 DRV		BurnDrvKov2pcthl;
 DRV		BurnDrvKov2pfwll;
 DRV		BurnDrvKov2pfwly;
@@ -27932,6 +27946,20 @@ static struct BurnDriver* pDriver[] = {
 
 
 	&BurnDrvKillbldqy,
+	&BurnDrvKovplusxb,
+	&BurnDrvKovpluss,
+	&BurnDrvKovpluspjzm,
+	&BurnDrvKovplusmss,
+	&BurnDrvKovplusms,
+	&BurnDrvKovplusjq,
+	&BurnDrvKovplusf2,
+	&BurnDrvKovplusf,
+	&BurnDrvKovplus2020ws,
+	&BurnDrvKovplus2012sttw,
+	&BurnDrvKovplus2012s,
+	&BurnDrvKovplus2012qs,
+	&BurnDrvKovplus2012p,
+	&BurnDrvKovplus2012emp,
 	&BurnDrvKov2pcthl,
 	&BurnDrvKov2pfwll,
 	&BurnDrvKov2pfwly,
