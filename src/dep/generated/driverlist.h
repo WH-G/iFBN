@@ -13926,6 +13926,32 @@ DRV		BurnDrvZzyzzyxx2;
 
 
 DRV		BurnDrvKillbldqy;
+DRV		BurnDrvKovzscs2019;
+DRV		BurnDrvKovzscs2020;
+DRV		BurnDrvKovshzscs;
+DRV		BurnDrvKovytzyce;
+DRV		BurnDrvKovytzyftxws;
+DRV		BurnDrvKovytzyhjb;
+DRV		BurnDrvKovytzyws;
+DRV		BurnDrvKovytzywstw;
+DRV		BurnDrvKovassga3;
+DRV		BurnDrvKovshpd3gs;
+DRV		BurnDrvKovshpds;
+DRV		BurnDrvKovshpjgtm;
+DRV		BurnDrvKovshpms;
+DRV		BurnDrvKovshpxy;
+DRV		BurnDrvKovshpzqhl;
+DRV		BurnDrvKovshpzqhl1v4;
+DRV		BurnDrvKovwslswz;
+DRV		BurnDrvKovwsqxzb;
+DRV		BurnDrvKovwsqxzb2;
+DRV		BurnDrvKovwsqxzb3;
+DRV		BurnDrvKovemzs;
+DRV		BurnDrvKovemzs2019;
+DRV		BurnDrvKovemzstw;
+DRV		BurnDrvKovqyz;
+DRV		BurnDrvKovsgyy;
+DRV		BurnDrvKovtmcs;
 DRV		BurnDrvKovplusxb;
 DRV		BurnDrvKovpluss;
 DRV		BurnDrvKovpluspjzm;
@@ -27946,6 +27972,32 @@ static struct BurnDriver* pDriver[] = {
 
 
 	&BurnDrvKillbldqy,
+	&BurnDrvKovzscs2019,
+	&BurnDrvKovzscs2020,
+	&BurnDrvKovshzscs,
+	&BurnDrvKovytzyce,
+	&BurnDrvKovytzyftxws,
+	&BurnDrvKovytzyhjb,
+	&BurnDrvKovytzyws,
+	&BurnDrvKovytzywstw,
+	&BurnDrvKovassga3,
+	&BurnDrvKovshpd3gs,
+	&BurnDrvKovshpds,
+	&BurnDrvKovshpjgtm,
+	&BurnDrvKovshpms,
+	&BurnDrvKovshpxy,
+	&BurnDrvKovshpzqhl,
+	&BurnDrvKovshpzqhl1v4,
+	&BurnDrvKovwslswz,
+	&BurnDrvKovwsqxzb,
+	&BurnDrvKovwsqxzb2,
+	&BurnDrvKovwsqxzb3,
+	&BurnDrvKovemzs,
+	&BurnDrvKovemzs2019,
+	&BurnDrvKovemzstw,
+	&BurnDrvKovqyz,
+	&BurnDrvKovsgyy,
+	&BurnDrvKovtmcs,
 	&BurnDrvKovplusxb,
 	&BurnDrvKovpluss,
 	&BurnDrvKovpluspjzm,
