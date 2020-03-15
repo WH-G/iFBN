@@ -7979,55 +7979,6 @@ struct BurnDriver BurnDrvKovshzscs = {
 	448, 224, 4, 3
 };
 
-// FBA4DROID 三国战纪 乱世英雄 2.7s天王版 Knights of Valour Superheroes (king of 2.7s)
-static struct BurnRomInfo kovshpdsRomDesc[] = {
-	{ "assg_v202cn.rom",			0x400000, 0x6fbfa1db, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
-
-	{ "t0600.rom",    		0x800000, 0xa919ec0f, 2 | BRF_GRA },			//  1 Tile data
-
-	{ "a0600.rom",	   		0x800000, 0x8bccc3ba, 3 | BRF_GRA },			//  2 Sprite Color Data
-	{ "a0601.rom",	   		0x800000, 0xcd391de8, 3 | BRF_GRA },			//  3
-	{ "a0602.rom",	   		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
-	{ "a0603.rom",	   		0x400000, 0xec31abda, 3 | BRF_GRA },			//  5
-	{ "a0603as.rom",	   		0x1000000, 0x3b11c9b3, 3 | BRF_GRA },			//  6
-
-	{ "b0600.rom",	   		0x800000, 0x32cb43ef, 4 | BRF_GRA },			//  7 Sprite Masks & Color Indexes
-	{ "b0601.rom",	   		0x400000, 0x184fb667, 4 | BRF_GRA },			//  8
-	{ "b0601as.rom",	   		0x800000, 0x127085a9, 4 | BRF_GRA },			//  9
-
-	{ "m0600.rom",	   		0x400000, 0x33bfc064, 5 | BRF_SND },			// 10 Samples
-
-	{ "kovassga_v100_china.asic", 	0x004000, 0xc5494399, 7 | BRF_PRG | BRF_ESS }, 
-};
-
-static struct BurnRomInfo kovshpdsBIOSRomDesc[] = {
-	{ "pgm_t01s.rom", 		0x200000, 0x1a7123a0, BRF_GRA | BRF_BIOS },	// 0x80 - 8x8 Text Layer Tiles
-	{ "pgm_m01s.rom", 		0x200000, 0x81a6aeca, BRF_SND | BRF_BIOS },	// 0x81 - Samples
-
-	{ "pgm_p01s.rom", 		0x020000, 0xe42b166e, BRF_PRG | BRF_BIOS },	// 0x82 - 68K BIOS (V0001,     older  - 02/26/97 - 11:14:09)
-	{ "pgm_p02s.u20", 		0x020000, 0x78c15fa2, BRF_PRG | BRF_BIOS },	// 0x83 - 68K BIOS (V0001,     newer  - 07/10/97 - 16:36:08)
-#if !defined (ROM_VERIFY)
-	{ "ddp3_bios.u37",		0x080000, 0xb3cc5c8f, BRF_PRG | BRF_BIOS }, // 0x84 - 68K BIOS (V0001,     custom - 07/17/97 - 19:44:59)
-	{ "bios.u42",     		0x020000, 0x517cf7a2, BRF_PRG | BRF_BIOS },	// 0x85 - 68K BIOS (V0001-01J, custom - 02/25/03 - 17:51:01)
-#else
-	{ "",             		0x000000, 0x00000000, 0                  },	// 0x84
-	{ "",             		0x000000, 0x00000000, 0                  },	// 0x85
-#endif
-};
-
-STDROMPICKEXT(kovshpds, kovshpds, kovshpdsBIOS)
-STD_ROM_FN(kovshpds)
-
-struct BurnDriver BurnDrvKovshpds = {
-	"kovshpds", "kovsh", "pgm", NULL, "2015",
-	"Knights of Valour Superheroes (king of 2.7s)\0", NULL, "hack", "PolyGameMaster",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-	NULL, kovshpdsRomInfo, kovshpdsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
-	kovshInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
-	448, 224, 4, 3
-};
-
 //kovshp
 
 //FBA4DROID 三国战纪 乱世王者2019 Knights of Valour Super Heroes Plus (Gone with the king of 2019)
@@ -8091,8 +8042,8 @@ struct BurnDriver BurnDrvKovshpzqhl1v4 = {
 	"Knights of Valour Super Heroes Plus (The strongest power of 1V4)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-	NULL, kovshpzqhl1v4RomInfo, kovshpzqhl1v4RomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-	kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	NULL, kovshpzqhl1v4RomInfo, kovshpzqhl1v4RomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
 	448, 224, 4, 3
 };
 
@@ -8120,8 +8071,8 @@ struct BurnDriver BurnDrvKovshpzqhl = {
 	"Knights of Valour Super Heroes Plus (The strongest power)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-	NULL, kovshpzqhlRomInfo, kovshpzqhlRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-	kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	NULL, kovshpzqhlRomInfo, kovshpzqhlRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
 	448, 224, 4, 3
 };
 
@@ -8153,8 +8104,8 @@ struct BurnDriver BurnDrvKovshpxy = {
 	"Knights of Valour Super Heroes Plus (Westward journey us)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-	NULL, kovshpxyRomInfo, kovshpxyRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-	kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	NULL, kovshpxyRomInfo, kovshpxyRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
 	448, 224, 4, 3
 };
 
@@ -8185,8 +8136,8 @@ struct BurnDriver BurnDrvKovshpms = {
 	"Knights of Valour Super Heroes Plus (seckill)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-	NULL, kovshpmsRomInfo, kovshpmsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-	kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	NULL, kovshpmsRomInfo, kovshpmsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
+	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
 	448, 224, 4, 3
 };
 
@@ -8219,41 +8170,6 @@ struct BurnDriver BurnDrvKovshpjgtm = {
 	448, 224, 4, 3
 };
 
-// FBA4DROID 三国战纪 乱世英雄 群雄逐鹿之盖世枭雄 Knights of Valour Super Heroes Plus (A pack of lions is a pack of lions)
-static struct BurnRomInfo kovshpd3gsRomDesc[] = {
-	{ "m6001.rom",			0x200000, 0x07575b97, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
-	{ "m6002.rom",			0x200000, 0x889587ee, 1 | BRF_PRG | BRF_ESS },  //  1 68K Code
-
-	{ "t0600.rom",    		0x800000, 0xa919ec0f, 2 | BRF_GRA },			//  1 Tile data
-
-	{ "a0600.rom",	   		0x800000, 0x72643288, 3 | BRF_GRA },			//  2 Sprite Color Data
-	{ "a0601.rom",	   		0x800000, 0x9c1d1bea, 3 | BRF_GRA }, 	        //  3 
-	{ "a0602.rom",	   		0x800000, 0x7b437e0f, 3 | BRF_GRA }, 	        //  4
-	{ "a0540.rom",	   		0x800000, 0x612306ed, 3 | BRF_GRA }, 	        //  5
-	{ "a0541.rom",	   		0x800000, 0xfac5160e, 3 | BRF_GRA }, 	        //  Extend
-
-	{ "b0600.rom",	   		0x800000, 0x0646c5ef, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
-	{ "b0540.rom",	   		0x800000, 0xb7032905, 4 | BRF_GRA },			//  7
-	{ "b0601.rom",	   		0x800000, 0x095378f3, 4 | BRF_GRA },			//  Extend
-
-	{ "p0600h.rom",	   		0x400000, 0xec3f335d, 5 | BRF_SND },			//  8 Samples
-
-	{ "kovshp_v100_china.asic", 	0x004000, 0xd9a43086, 7 | BRF_PRG | BRF_ESS },  //  9 Internal ARM7 Rom
-};
-
-STDROMPICKEXT(kovshpd3gs, kovshpd3gs, pgm)
-STD_ROM_FN(kovshpd3gs)
-
-struct BurnDriver BurnDrvKovshpd3gs = {
-	"kovshpd3gs", "kovshp", "pgm", NULL, "2018",
-	"Knights of Valour Super Heroes Plus (A pack of lions is a pack of lions)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-	NULL, kovshpd3gsRomInfo, kovshpd3gsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
-	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
-	448, 224, 4, 3
-};
-
 // FBA4DROID 三国战纪 乱世3拳皇 Knights of Valour Super Heroes Plus (Gone with the king of fighters of three)
 static struct BurnRomInfo kovassga3RomDesc[] = {
 	{ "p0600h.rom",			0x400000, 0x57a9c53f, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
@@ -8264,11 +8180,11 @@ static struct BurnRomInfo kovassga3RomDesc[] = {
 	{ "a0601.rom",	   		0x800000, 0xff7a4373, 3 | BRF_GRA }, 	        //  3 
 	{ "a0602.rom",	   		0x800000, 0xe7a32959, 3 | BRF_GRA }, 	        //  4
 	{ "a0540.rom",	   		0x800000, 0xcbc57bc1, 3 | BRF_GRA }, 	        //  5
-	{ "a0603.rom",	   		0x800000, 0xec31abda, 3 | BRF_GRA }, 	        //  Extend
+	{ "a0603.rom",	   		0x400000, 0xec31abda, 3 | BRF_GRA }, 	        //  Extend
 
 	{ "b0600.rom",	   		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
 	{ "b0540.rom",	   		0x800000, 0x1885039b, 4 | BRF_GRA },			//  7
-	{ "b0601.rom",	   		0x800000, 0xa0bb1c2f, 4 | BRF_GRA },			//  Extend
+	{ "b0601.rom",	   		0x400000, 0xa0bb1c2f, 4 | BRF_GRA },			//  Extend
 
 	{ "m0600.rom",	   		0x400000, 0xeae5bf80, 5 | BRF_SND },			//  8 Samples
 
@@ -8539,6 +8455,38 @@ struct BurnDriver BurnDrvKovytzyce = {
 	448, 224, 4, 3
 };
 
+// FBA4DROID 三国战纪 一统中原 无双版(FBAS) Knights of Valour - Yi Tong Zhong Yuan (unparalleled of FBAS)
+static struct BurnRomInfo kovytzywsRomDesc[] = {
+	{ "ytzyws_prg.rom",		0x400000, 0x4f01a87d, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0600.rom",    		0x800000, 0xde7fdc0c, 2 | BRF_GRA },			//  1 Tile data
+
+	{ "a0600.rom",	   		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0601.rom",	   		0x800000, 0xff7a4373, 3 | BRF_GRA }, 	        //  3 
+	{ "a0602.rom",	   		0x800000, 0xf25b6930, 3 | BRF_GRA }, 	        //  4
+	{ "a0540.rom",	   		0x800000, 0xdf811b9c, 3 | BRF_GRA }, 	        //  5
+
+	{ "b0600.rom",	   		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "b0540.rom",	   		0x800000, 0xaa821799, 4 | BRF_GRA },			//  7
+
+	{ "m0600.rom",	   		0x400000, 0x53532587, 5 | BRF_SND },			//  8 Samples
+
+	{ "kovytzyws_v100_china.asic", 	0x004000, 0x5aa832c1, 7 | BRF_PRG | BRF_ESS },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovytzyws, kovytzyws, pgm)
+STD_ROM_FN(kovytzyws)
+
+struct BurnDriver BurnDrvKovytzyws = {
+	"kovytzyws", "kovytzy", "pgm", NULL, "2018",
+	"Knights of Valour - Yi Tong Zhong Yuan (unparalleled of FBAS)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
+	NULL, kovytzywsRomInfo, kovytzywsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
+	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
 // FBA4DROID 三国战纪 一统中原 无双版(FBN街机) Knights of Valour - Yi Tong Zhong Yuan Plus (unparalleled of FBN)
 static struct BurnRomInfo kovytzyftxwsRomDesc[] = {
 	{ "ytzy_v201cn.rom",	0x400000, 0x9c4ace91, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code , weird size!
@@ -8586,7 +8534,7 @@ static struct BurnRomInfo kovytzyhjbRomDesc[] = {
 	{ "b0600.rom",	   		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
 	{ "b0540.rom",	   		0x800000, 0x94fc8287, 4 | BRF_GRA },			//  7
 
-	{ "m0600.rom",	   		0x400000, 0x858ab94e, 5 | BRF_SND },			//  8 Samples
+	{ "m0600.rom",	   		0x400041, 0x858ab94e, 5 | BRF_SND },			//  8 Samples
 
 	{ "kovshp_v100_china.asic", 	0x004000, 0x9d352b6f, 7 | BRF_PRG | BRF_ESS },  //  9 Internal ARM7 Rom
 };
@@ -8600,39 +8548,7 @@ struct BurnDriver BurnDrvKovytzyhjb = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
 	NULL, kovytzyhjbRomInfo, kovytzyhjbRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
-	448, 224, 4, 3
-};
-
-// FBA4DROID 三国战纪 一统中原 无双版(FBAS) Knights of Valour - Yi Tong Zhong Yuan (unparalleled of FBAS)
-static struct BurnRomInfo kovytzywsRomDesc[] = {
-	{ "ytzyws_prg.rom",		0x400000, 0x4f01a87d, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
-
-	{ "t0600.rom",    		0x800000, 0xde7fdc0c, 2 | BRF_GRA },			//  1 Tile data
-
-	{ "a0600.rom",	   		0x800000, 0xd8167834, 3 | BRF_GRA },			//  2 Sprite Color Data
-	{ "a0601.rom",	   		0x800000, 0xff7a4373, 3 | BRF_GRA }, 	        //  3 
-	{ "a0602.rom",	   		0x800000, 0xf25b6930, 3 | BRF_GRA }, 	        //  4
-	{ "a0540.rom",	   		0x800000, 0xdf811b9c, 3 | BRF_GRA }, 	        //  5
-
-	{ "b0600.rom",	   		0x800000, 0x7d3cd059, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
-	{ "b0540.rom",	   		0x800000, 0xaa821799, 4 | BRF_GRA },			//  7
-
-	{ "m0600.rom",	   		0x400000, 0x53532587, 5 | BRF_SND },			//  8 Samples
-
-	{ "kovytzyws_v100_china.asic", 	0x004000, 0x5aa832c1, 7 | BRF_PRG | BRF_ESS },  //  9 Internal ARM7 Rom
-};
-
-STDROMPICKEXT(kovytzyws, kovytzyws, pgm)
-STD_ROM_FN(kovytzyws)
-
-struct BurnDriver BurnDrvKovytzyws = {
-	"kovytzyws", "kovytzy", "pgm", NULL, "2018",
-	"Knights of Valour - Yi Tong Zhong Yuan (unparalleled of FBAS)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-	NULL, kovytzywsRomInfo, kovytzywsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
 	448, 224, 4, 3
 };
 
@@ -8696,7 +8612,7 @@ struct BurnDriver BurnDrvKovwsqxzb = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
 	NULL, kovwsqxzbRomInfo, kovwsqxzbRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
 	448, 224, 4, 3
 };
 
@@ -8728,7 +8644,7 @@ struct BurnDriver BurnDrvKovwsqxzb2 = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
 	NULL, kovwsqxzb2RomInfo, kovwsqxzb2RomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
 	448, 224, 4, 3
 };
 
@@ -8760,7 +8676,7 @@ struct BurnDriver BurnDrvKovwsqxzb3 = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
 	NULL, kovwsqxzb3RomInfo, kovwsqxzb3RomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
 	448, 224, 4, 3
 };
 
@@ -8963,6 +8879,57 @@ struct BurnDriver BurnDrvKovlsyx = {
 	448, 224, 4, 3
 };
 
+// FBA4DROID 三国战纪 乱世英雄 2.7s天王版 Knights of Valour Superheroes (king of 2.7s)
+static struct BurnRomInfo kovshpdsRomDesc[] = {
+	{ "assg_v202cn.rom",			0x400000, 0x6fbfa1db, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0600.rom",    		0x800000, 0xa919ec0f, 2 | BRF_GRA },			//  1 Tile data
+
+	{ "a0600.rom",	   		0x800000, 0x8bccc3ba, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0601.rom",	   		0x800000, 0xcd391de8, 3 | BRF_GRA },			//  3
+	{ "a0602.rom",	   		0x800000, 0xe7a32959, 3 | BRF_GRA },			//  4
+	{ "a0603as.rom",	   	0x1000000, 0x3b11c9b3, 3 | BRF_GRA },			//  5
+	{ "a0603.rom",	   		0x400000, 0xec31abda, 3 | BRF_GRA },			//  6
+
+
+	{ "b0600.rom",	   		0x800000, 0x32cb43ef, 4 | BRF_GRA },			//  7 Sprite Masks & Color Indexes
+	{ "b0601as.rom",	   	0x800000, 0x127085a9, 4 | BRF_GRA },			//  8
+	{ "b0601.rom",	   		0x400000, 0x184fb667, 4 | BRF_GRA },			//  9
+	
+
+	{ "m0600.rom",	   		0x400000, 0x33bfc064, 5 | BRF_SND },			// 10 Samples
+
+	{ "kovassga_v100_china.asic", 	0x004000, 0xc5494399, 7 | BRF_PRG | BRF_ESS }, 
+};
+
+static struct BurnRomInfo kovshpdsBIOSRomDesc[] = {
+	{ "pgm_t01s.rom", 		0x200000, 0x1a7123a0, BRF_GRA | BRF_BIOS },	// 0x80 - 8x8 Text Layer Tiles
+	{ "pgm_m01s.rom", 		0x200000, 0x81a6aeca, BRF_SND | BRF_BIOS },	// 0x81 - Samples
+
+	{ "pgm_p01s.rom", 		0x020000, 0xe42b166e, BRF_PRG | BRF_BIOS },	// 0x82 - 68K BIOS (V0001,     older  - 02/26/97 - 11:14:09)
+	{ "pgm_p02s.u20", 		0x020000, 0x78c15fa2, BRF_PRG | BRF_BIOS },	// 0x83 - 68K BIOS (V0001,     newer  - 07/10/97 - 16:36:08)
+#if !defined (ROM_VERIFY)
+	{ "ddp3_bios.u37",		0x080000, 0xb3cc5c8f, BRF_PRG | BRF_BIOS }, // 0x84 - 68K BIOS (V0001,     custom - 07/17/97 - 19:44:59)
+	{ "bios.u42",     		0x020000, 0x517cf7a2, BRF_PRG | BRF_BIOS },	// 0x85 - 68K BIOS (V0001-01J, custom - 02/25/03 - 17:51:01)
+#else
+	{ "",             		0x000000, 0x00000000, 0                  },	// 0x84
+	{ "",             		0x000000, 0x00000000, 0                  },	// 0x85
+#endif
+};
+
+STDROMPICKEXT(kovshpds, kovshpds, kovshpdsBIOS)
+STD_ROM_FN(kovshpds)
+
+struct BurnDriver BurnDrvKovshpds = {
+	"kovshpds", "kovshp", "pgm", NULL, "2015",
+	"Knights of Valour Superheroes (king of 2.7s)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
+	NULL, kovshpdsRomInfo, kovshpdsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
+	kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
 // FBA4DROID 三国战纪 乱世英雄 群雄逐鹿 加强版 Knights of Valour Super Heroes Plus (Powerful Politicians Fighting For super supremacy)
 static struct BurnRomInfo kovlsyxqxzlpRomDesc[] = {
 	{ "new_qxzlp_v500cn.rom",		0x400000, 0x0ce0c165, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
@@ -9127,6 +9094,41 @@ struct BurnDriver BurnDrvKovshpd3tw = {
 	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
 	NULL, kovshpd3twRomInfo, kovshpd3twRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovDIPInfo,
 	kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 三国战纪 乱世英雄 群雄逐鹿之盖世枭雄 Knights of Valour Super Heroes Plus (A pack of lions is a pack of lions)
+static struct BurnRomInfo kovshpd3gsRomDesc[] = {
+	{ "m6001.rom",			0x200000, 0x07575b97, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+	{ "m6002.rom",			0x200000, 0x889587ee, 1 | BRF_PRG | BRF_ESS },  //  1 68K Code
+
+	{ "t0600.rom",    		0x800000, 0xa919ec0f, 2 | BRF_GRA },			//  1 Tile data
+
+	{ "a0600.rom",	   		0x800000, 0x72643288, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0601.rom",	   		0x800000, 0x9c1d1bea, 3 | BRF_GRA }, 	        //  3 
+	{ "a0602.rom",	   		0x800000, 0x7b437e0f, 3 | BRF_GRA }, 	        //  4
+	{ "a0540.rom",	   		0x800000, 0x612306ed, 3 | BRF_GRA }, 	        //  5
+	{ "a0541.rom",	   		0x800000, 0xfac5160e, 3 | BRF_GRA }, 	        //  Extend
+
+	{ "b0600.rom",	   		0x800000, 0x0646c5ef, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "b0540.rom",	   		0x800000, 0xb7032905, 4 | BRF_GRA },			//  7
+	{ "b0601.rom",	   		0x800000, 0x095378f3, 4 | BRF_GRA },			//  Extend
+
+	{ "p0600h.rom",	   		0x400000, 0xec3f335d, 5 | BRF_SND },			//  8 Samples
+
+	{ "kovshp_v100_china.asic", 	0x004000, 0xd9a43086, 7 | BRF_PRG | BRF_ESS },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovshpd3gs, kovshpd3gs, pgm)
+STD_ROM_FN(kovshpd3gs)
+
+struct BurnDriver BurnDrvKovshpd3gs = {
+	"kovshpd3gs", "kovshp", "pgm", NULL, "2018",
+	"Knights of Valour Super Heroes Plus (A pack of lions is a pack of lions)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
+	NULL, kovshpd3gsRomInfo, kovshpd3gsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
+	kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
 	448, 224, 4, 3
 };
 
