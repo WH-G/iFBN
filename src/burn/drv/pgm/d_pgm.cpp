@@ -9651,6 +9651,132 @@ struct BurnDriver BurnDrvKov2pfwly = {
 
 //olds100a
 
+// FBA4DROID 西天取真经 - 幻行无极 Xi Yo Gi Shi Re Zuang Super (Phantom rows promise)
+static struct BurnRomInfo oldshxwjRomDesc[] = {
+	{ "hxwj_prg.rom",	0x400000, 0x996b99eb, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "pgm_t0500.u18",	   	0x400000, 0xd881726c, 2 | BRF_GRA },			//  1 Tile data
+	{ "pgm_t0501.u19",	   	0x200000, 0xd2106864, 2 | BRF_GRA },			//  2
+
+	{ "pgm_a0500.u5",	   	0x400000, 0x80a59197, 3 | BRF_GRA },			//  3 Sprite Color Data
+	{ "pgm_a0501.u6",	   	0x400000, 0x98c931b1, 3 | BRF_GRA },			//  4
+	{ "pgm_a0502.u7",	   	0x400000, 0xc3fcdf1d, 3 | BRF_GRA },			//  5
+	{ "pgm_a0503.u8",	   	0x400000, 0x066dffec, 3 | BRF_GRA },			//  6
+	{ "pgm_a0504.u11",	   	0x400000, 0x45337583, 3 | BRF_GRA },			//  7
+	{ "pgm_a0505.u12",	   	0x400000, 0x5b8cf3a5, 3 | BRF_GRA },			//  8
+	{ "hxwj_a0506.rom",	   	0x400000, 0x6f71bdbb, 3 | BRF_GRA },			//  9
+
+	{ "pgm_b0500.u9",	   	0x400000, 0xcde07f74, 4 | BRF_GRA },			// 10 Sprite Masks & Color Indexes
+	{ "pgm_b0501.u10",	   	0x400000, 0x1546c2e9, 4 | BRF_GRA },			// 11
+	{ "pgm_b0502.u15",	   	0x400000, 0xe97b31c3, 4 | BRF_GRA },			// 12
+	{ "hxwj_b0503.u16",	   	0x400000, 0x3bf971d0, 4 | BRF_GRA },			// 13
+
+	{ "pgm_m0500.u1",	   	0x200000, 0x37928cdd, 5 | BRF_SND },			// 14 Samples
+	
+#if !defined (ROM_VERIFY)
+	{ "kd-u6.512",	   		0x010000, 0xe7613dda, 9 | BRF_PRG | BRF_ESS },  // 15 Protection Rom
+#else
+	{ "ram_dump",	   		0x040000, 0x280cfb4e, 0 | BRF_OPT },
+#endif
+};
+
+STDROMPICKEXT(oldshxwj, oldshxwj, pgm)
+STD_ROM_FN(oldshxwj)
+
+struct BurnDriver BurnDrvOldshxwj = {
+	"oldshxwj", "olds", "pgm", NULL, "2018",
+	"Xi Yo Gi Shi Re Zuang Super (Phantom rows promise)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM, GBF_SCRFIGHT, 0,
+	NULL, oldshxwjRomInfo, oldshxwjRomName, NULL, NULL, NULL, NULL, pgmInputInfo, olds100DIPInfo,
+	oldsInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 西行平妖记 - 大圣归来 Xi Yo Gi Shi Re Zuang Super (The risk return)
+static struct BurnRomInfo oldsdsglRomDesc[] = {
+	{ "dsgl_prg.rom",	0x400000, 0x5ca8df67, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "dsgl_t0500.rom",	   	0x400000, 0x434ddae8, 2 | BRF_GRA },			//  1 Tile data
+	{ "pgm_t0501.u19",	   	0x200000, 0xd2106864, 2 | BRF_GRA },			//  2
+
+	{ "pgm_a0500.u5",	   	0x400000, 0x80a59197, 3 | BRF_GRA },			//  3 Sprite Color Data
+	{ "pgm_a0501.u6",	   	0x400000, 0x98c931b1, 3 | BRF_GRA },			//  4
+	{ "pgm_a0502.u7",	   	0x400000, 0xc3fcdf1d, 3 | BRF_GRA },			//  5
+	{ "pgm_a0503.u8",	   	0x400000, 0x066dffec, 3 | BRF_GRA },			//  6
+	{ "pgm_a0504.u11",	   	0x400000, 0x45337583, 3 | BRF_GRA },			//  7
+	{ "pgm_a0505.u12",	   	0x400000, 0x5b8cf3a5, 3 | BRF_GRA },			//  8
+	{ "dsgl_a0506.rom",	   	0x400000, 0x1c174e4a, 3 | BRF_GRA },			//  9
+
+	{ "pgm_b0500.u9",	   	0x400000, 0xcde07f74, 4 | BRF_GRA },			// 10 Sprite Masks & Color Indexes
+	{ "pgm_b0501.u10",	   	0x400000, 0x1546c2e9, 4 | BRF_GRA },			// 11
+	{ "pgm_b0502.u15",	   	0x400000, 0xe97b31c3, 4 | BRF_GRA },			// 12
+	{ "dsgl_b0503.u16",	   	0x400000, 0x4922301f, 4 | BRF_GRA },			// 13
+
+	{ "pgm_m0500.u1",	   	0x200000, 0x37928cdd, 5 | BRF_SND },			// 14 Samples
+	
+#if !defined (ROM_VERIFY)
+	{ "kd-u6.512",	   		0x010000, 0xe7613dda, 9 | BRF_PRG | BRF_ESS },  // 15 Protection Rom
+#else
+	{ "ram_dump",	   		0x040000, 0x280cfb4e, 0 | BRF_OPT },
+#endif
+};
+
+STDROMPICKEXT(oldsdsgl, oldsdsgl, pgm)
+STD_ROM_FN(oldsdsgl)
+
+struct BurnDriver BurnDrvOldsdsgl = {
+	"oldsdsgl", "olds", "pgm", NULL, "2018",
+	"Xi Yo Gi Shi Re Zuang Super (The risk return)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM, GBF_SCRFIGHT, 0,
+	NULL, oldsdsglRomInfo, oldsdsglRomName, NULL, NULL, NULL, NULL, pgmInputInfo, olds100DIPInfo,
+	oldsInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 西天取真经 - 幻行无极 Xi Yo Gi Shi Re Zuang Super (Phantom rows promise)
+static struct BurnRomInfo olds100ahxwjRomDesc[] = {
+	{ "p0500.v10",	   		0x400000, 0xec4efc5a, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+
+	{ "t0500.rom",	   		0x400000, 0x434ddae8, 2 | BRF_GRA },			//  1 Tile data
+	{ "t0501.rom",	   		0x200000, 0xd2106864, 2 | BRF_GRA },			//  2
+
+	{ "a0500.rom",	   		0x400000, 0x80a59197, 3 | BRF_GRA },			//  3 Sprite Color Data
+	{ "a0501.rom",	   		0x400000, 0x98c931b1, 3 | BRF_GRA },			//  4
+	{ "a0502.rom",	   		0x400000, 0xc3fcdf1d, 3 | BRF_GRA },			//  5
+	{ "a0503.rom",	   		0x400000, 0x066dffec, 3 | BRF_GRA },			//  6
+	{ "a0504.rom",	   		0x400000, 0x45337583, 3 | BRF_GRA },			//  7
+	{ "a0505.rom",	   		0x400000, 0x5b8cf3a5, 3 | BRF_GRA },			//  8
+	{ "a0506.rom",	   		0x400000, 0x5d36a5ed, 3 | BRF_GRA },			//  9
+
+	{ "b0500.rom",	   		0x400000, 0xcde07f74, 4 | BRF_GRA },			// 10 Sprite Masks & Color Indexes
+	{ "b0501.rom",	   		0x400000, 0x1546c2e9, 4 | BRF_GRA },			// 11
+	{ "b0502.rom",	   		0x400000, 0xe97b31c3, 4 | BRF_GRA },			// 12
+	{ "b0503.u16",	   		0x400000, 0x7445851e, 4 | BRF_GRA },			// 13
+
+	{ "m0500.rom",	   		0x200000, 0x37928cdd, 5 | BRF_SND },			// 14 Samples
+	
+#if !defined (ROM_VERIFY)
+	{ "kd-u6.512",	   		0x010000, 0xe7613dda, 9 | BRF_PRG | BRF_ESS },  // 15 Protection Rom
+#else
+	{ "ram_dump",	   		0x040000, 0x280cfb4e, 0 | BRF_OPT },
+#endif
+};
+
+STDROMPICKEXT(olds100ahxwj, olds100ahxwj, pgm)
+STD_ROM_FN(olds100ahxwj)
+
+struct BurnDriver BurnDrvOlds100ahxwj = {
+	"olds100ahxwj", "olds", "pgm", NULL, "2018",
+	"Xi Yo Gi Shi Re Zuang Super (Phantom rows promise)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM, GBF_SCRFIGHT, 0,
+	NULL, olds100ahxwjRomInfo, olds100ahxwjRomName, NULL, NULL, NULL, NULL, pgmInputInfo, olds100DIPInfo,
+	oldsInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
 // FBA4DROID 西游释厄传超级版 大圣归来 Xi Yo Gi Shi Re Zuang Super (Return of Monkey King 20181229)
 static struct BurnRomInfo olds100adsglRomDesc[] = {
 	{ "p0500.v10",	   		0x400000, 0x8ce84e5b, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
@@ -9978,6 +10104,39 @@ struct BurnDriver BurnDrvOrlegndcmm = {
 	448, 224, 4, 3
 };
 
+// FBA4DROID 西游释厄传超级版 幻化五行 Xi Yo Gi Shi Re Zuang (Form five lines of)
+static struct BurnRomInfo orlegndcjhcsRomDesc[] = {
+	{ "p0101.160",			0x200000, 0xb022ede5, 1 | BRF_PRG | BRF_ESS },	//  0 68K Code
+
+	{ "t0100.rom",			0x400000, 0x61425e1e, 2 | BRF_GRA },			//  1 Tile data
+
+	{ "a0100.rom",			0x400000, 0x8b3bd88a, 3 | BRF_GRA },			//  2 Sprite Color Data
+	{ "a0101.rom",			0x400000, 0x3b9e9644, 3 | BRF_GRA },			//  3	  
+	{ "a0102.rom",			0x400000, 0x069e2c38, 3 | BRF_GRA },			//  4
+	{ "a0103.rom",			0x400000, 0x4460a3fd, 3 | BRF_GRA },			//  5
+	{ "a0104.rom",			0x400000, 0x5f8abb56, 3 | BRF_GRA },			//  6
+	{ "a0105.rom",			0x400000, 0xa17a7147, 3 | BRF_GRA },			//  7
+
+	{ "b0100.rom",			0x400000, 0x69d2e48c, 4 | BRF_GRA },			//  8 Sprite Masks & Color Indexes
+	{ "b0101.rom",			0x400000, 0x0d587bf3, 4 | BRF_GRA },			//  9
+	{ "b0102.rom",			0x400000, 0x43823c1e, 4 | BRF_GRA },			// 10
+
+	{ "m0100.rom",			0x200000, 0xe5c36c83, 5 | BRF_SND },			// 11 Samples
+};
+
+STDROMPICKEXT(orlegndcjhcs, orlegndcjhcs, pgm)
+STD_ROM_FN(orlegndcjhcs)
+
+struct BurnDriver BurnDrvOrlegndcjhcs = {
+	"orlegndcjhcs", "orlegend", "pgm", NULL, "2018",
+	"Xi Yo Gi Shi Re Zuang (Form five lines of)\0", NULL, "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM, GBF_SCRFIGHT, 0,
+	NULL, orlegndcjhcsRomInfo, orlegndcjhcsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, orld112cDIPInfo,
+	orlegendInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
 // FBA4DROID 西游释厄传 群魔乱舞 黄帽伏魔版 Xi Yo Gi Shi Re Zuang (Yellow Hat Subduing Devils 20180802)
 static struct BurnRomInfo oldsplushmfRomDesc[] = {
 	{ "p05301.rom",			0x400000, 0xc2e70cae, 1 | BRF_PRG | BRF_ESS },	//  0 68K Code
@@ -10006,6 +10165,70 @@ struct BurnDriver BurnDrvOldsplushmf = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
 	NULL, oldsplushmfRomInfo, oldsplushmfRomName, NULL, NULL, NULL, NULL, pgmInputInfo, puzzli2DIPInfo,
+	oldsplusInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 西游释厄传 群魔乱舞302 连击加强版 Xi Yo Gi Shi Re Zuang (Monsters dance 302 combo enhanced)
+static struct BurnRomInfo oldspluspRomDesc[] = {
+	{ "p05301.rom",			0x400000, 0xd97004a3, 1 | BRF_PRG | BRF_ESS },	//  0 68K Code
+
+	{ "t05301.rom",			0x800000, 0x8257bbb0, 2 | BRF_GRA },			//  1 Tile data
+
+	{ "a05301.rom",			0x800000, 0x57946fd2, 3 | BRF_GRA },	 		//  2 Sprite Color Data
+	{ "a05302.rom",			0x800000, 0x3459a0b8, 3 | BRF_GRA },			//  3
+	{ "a05303.rom",			0x800000, 0x13475d85, 3 | BRF_GRA },			//  4
+	{ "a05304.rom",			0x800000, 0xf03ef7a6, 3 | BRF_GRA },			//  5
+
+	{ "b05301.rom",			0x800000, 0xfd98f503, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "b05302.rom",			0x800000, 0x9f6094a8, 4 | BRF_GRA },			//  7
+
+	{ "m05301.rom",			0x400000, 0x86ec83bc, 5 | BRF_SND },			//  8 Samples
+
+	{ "oldsplus_igs027a.bin",	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },	//  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(oldsplusp, oldsplusp, pgm)
+STD_ROM_FN(oldsplusp)
+
+struct BurnDriver BurnDrvOldsplusp = {
+	"oldsplusp", "oldsplus", "pgm", NULL, "2018",
+	"Xi Yo Gi Shi Re Zuang (Monsters dance 302 combo enhanced)\0", "Incomplete Dump", "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, oldspluspRomInfo, oldspluspRomName, NULL, NULL, NULL, NULL, pgmInputInfo, puzzli2DIPInfo,
+	oldsplusInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+	448, 224, 4, 3
+};
+
+// FBA4DROID 西游释厄传 群魔乱舞 一键华丽版 Xi Yo Gi Shi Re Zuang (One key gorgeous edition)
+static struct BurnRomInfo oldsplusyjhlRomDesc[] = {
+	{ "p05301.rom",			0x400000, 0xd7860f14, 1 | BRF_PRG | BRF_ESS },	//  0 68K Code
+
+	{ "igs_t05301w064.u2",	0x800000, 0x8257bbb0, 2 | BRF_GRA },			//  1 Tile data
+
+	{ "igs_a05301w064.u3",	0x800000, 0x57946fd2, 3 | BRF_GRA },	 		//  2 Sprite Color Data
+	{ "igs_a05302w064.u4",	0x800000, 0x3459a0b8, 3 | BRF_GRA },			//  3
+	{ "igs_a05303w064.u6",	0x800000, 0x13475d85, 3 | BRF_GRA },			//  4
+	{ "igs_a05304w064.u8",	0x800000, 0xf03ef7a6, 3 | BRF_GRA },			//  5
+
+	{ "igs_b05301w064.u9",	0x800000, 0xfd98f503, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+	{ "igs_b05302w064.u11",	0x800000, 0x9f6094a8, 4 | BRF_GRA },			//  7
+
+	{ "igs_w05301b032.u5",	0x400000, 0x86ec83bc, 5 | BRF_SND },			//  8 Samples
+
+	{ "oldsplus_igs027a.bin",	0x004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },	//  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(oldsplusyjhl, oldsplusyjhl, pgm)
+STD_ROM_FN(oldsplusyjhl)
+
+struct BurnDriver BurnDrvOldsplusyjhl = {
+	"oldsplusyjhl", "oldsplus", "pgm", NULL, "2018",
+	"Xi Yo Gi Shi Re Zuang (One key gorgeous edition)\0", "Incomplete Dump", "hack", "PolyGameMaster",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+	NULL, oldsplusyjhlRomInfo, oldsplusyjhlRomName, NULL, NULL, NULL, NULL, pgmInputInfo, puzzli2DIPInfo,
 	oldsplusInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
 	448, 224, 4, 3
 };

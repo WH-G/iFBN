@@ -14040,8 +14040,14 @@ DRV		BurnDrvOlds100aem2016;
 DRV		BurnDrvOlds100afybh;
 DRV		BurnDrvOlds100asrp;
 DRV		BurnDrvOlds100aylzx;
+DRV		BurnDrvOlds100ahxwj;
+DRV		BurnDrvOldsdsgl;
+DRV		BurnDrvOldshxwj;
 DRV		BurnDrvOldsplushmf;
+DRV		BurnDrvOldsplusp;
+DRV		BurnDrvOldsplusyjhl;
 DRV		BurnDrvOrlegndcmm;
+DRV		BurnDrvOrlegndcjhcs;
 
 #undef DRV
 
@@ -28086,6 +28092,12 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvOlds100afybh,
 	&BurnDrvOlds100asrp,
 	&BurnDrvOlds100aylzx,
+	&BurnDrvOlds100ahxwj,
+	&BurnDrvOldsdsgl,
+	&BurnDrvOldshxwj,
 	&BurnDrvOldsplushmf,
+	&BurnDrvOldsplusp,
+	&BurnDrvOldsplusyjhl,
 	&BurnDrvOrlegndcmm,
+	&BurnDrvOrlegndcjhcs,
 };
